@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHIN – Lankytojų registracija</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="tablet">
+
+    <!-- ======= HEADER ======= -->
+    <header>
+        <img id="headerLogo" src="Techin_dark.webp" alt="TECHIN" class="header-logo">
+        <div class="header-right">
+            <span id="headerClock"></span>
+            <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </header>
+
+    <!-- ======= SCREEN 1: Welcome (split layout) ======= -->
+    <div class="screen active" id="screen1">
+
+        <!-- Left half: teal background with clock, date, logo -->
+        <div class="left-panel">
+            <div class="left-top">
+                <p id="dateDisplay"></p>
+                <h1 id="timeDisplay"></h1>
+            </div>
+            <img id="leftLogo" src="Techin_dark.webp" alt="TECHIN" class="left-logo">
+        </div>
+
+        <!-- Right half: welcome content -->
+        <div class="right-panel">
+            <div class="lang-row">
+                <button class="lang-btn active" onclick="setLang('lt')">LT</button>
+                <button class="lang-btn" onclick="setLang('en')">EN</button>
+            </div>
+            <h2 data-lt="Sveiki atvykę" data-en="Welcome">Sveiki atvykę</h2>
+            <p data-lt="Pradėkite lankytojo registraciją" data-en="Begin visitor registration">Pradėkite lankytojo registraciją</p>
+            <button class="btn-green big" onclick="goTo(2)" data-lt="Pradėti registraciją" data-en="Start registration">Pradėti registraciją</button>
+        </div>
+
+    </div>
+
+    <!-- ======= SCREEN 2: Registration form ======= -->
+    <div class="screen" id="screen2">
+        <div class="page">
+
+            <div class="steps">
+                <div class="step done">1</div><div class="line done"></div>
+                <div class="step active">2</div><div class="line"></div>
+                <div class="step">3</div><div class="line"></div>
+                <div class="step">4</div>
+            </div>
+
+            <h2 data-lt="Registracijos forma" data-en="Registration form">Registracijos forma</h2>
+
+            <div class="form-grid">
+                <div class="field">
+                    <label data-lt="Vardas" data-en="First name">Vardas</label>
+                    <input type="text" id="firstName" placeholder="Įveskite vardą">
+                </div>
+                <div class="field">
+                    <label data-lt="Pavardė" data-en="Last name">Pavardė</label>
+                    <input type="text" id="lastName" placeholder="Įveskite pavardę">
+                </div>
+                <div class="field">
+                    <label data-lt="Apsilankymo tikslas" data-en="Purpose of visit">Apsilankymo tikslas</label>
+                    <select id="purpose" onchange="checkOther()">
+                        <option value="">-- Pasirinkite --</option>
+                        <option value="studies">Dėl mokslų</option>
+                        <option value="docs">Dėl dokumentų</option>
+                        <option value="consult">Konsultacijai</option>
+                        <option value="scheduled">Suderintas vizitas</option>
+                        <option value="other">Kita</option>
+                    </select>
+                </div>
+                <div class="field" id="otherField" style="display:none">
+                    <label data-lt="Patikslinkite tikslą" data-en="Specify purpose">Patikslinkite tikslą</label>
+                    <input type="text" id="otherText" maxlength="50" placeholder="Aprašykite (iki 50 simbolių)">
+                </div>
+                <div class="field">
+                    <label data-lt="Vizitas pas" data-en="Visiting">Vizitas pas</label>
+                    <select id="employee">
+                        <option value="">-- Pasirinkite darbuotoją --</option>
+                        <option value="jonas">Jonas Jonaitis</option>
+                        <option value="petras">Petras Petraitis</option>
+                        <option value="ona">Ona Onaitė</option>
+                        <option value="laura">Laura Lauraitė</option>
+                        <option value="tomas">Tomas Tomaitis</option>
+                    </select>
+                </div>
+            </div>
+
+            <p class="error" id="formError"></p>
+
+            <div class="btn-row">
+                <button class="btn-outline" onclick="goTo(1)" data-lt="Grįžti" data-en="Back">Grįžti</button>
+                <button class="btn-green" onclick="submitForm()" data-lt="Tęsti" data-en="Continue">Tęsti</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ======= SCREEN 3: Directions ======= -->
+    <div class="screen" id="screen3">
+        <div class="page center">
+
+            <div class="steps">
+                <div class="step done">1</div><div class="line done"></div>
+                <div class="step done">2</div><div class="line done"></div>
+                <div class="step active">3</div><div class="line"></div>
+                <div class="step">4</div>
+            </div>
+
+            <h2 data-lt="Kur eiti" data-en="Directions">Kur eiti</h2>
+
+            <div class="map-card">
+                <div class="floor">
+                    <span class="floor-name">2 aukštas</span>
+                    <div class="rooms">
+                        <div class="room">201</div>
+                        <div class="room green">202 ✓</div>
+                        <div class="room">203</div>
+                    </div>
+                </div>
+                <div class="floor-divider">↑ Laiptai</div>
+                <div class="floor">
+                    <span class="floor-name">1 aukštas</span>
+                    <div class="rooms">
+                        <div class="room you">Jūs čia</div>
+                        <div class="room">102</div>
+                        <div class="room">103</div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="direction-text" data-lt="Eikite į antrą aukštą, kabinetas 202" data-en="Go to the second floor, room 202">
+                Eikite į antrą aukštą, kabinetas 202
+            </p>
+
+            <div class="btn-row">
+                <button class="btn-outline" onclick="goTo(2)" data-lt="Grįžti" data-en="Back">Grįžti</button>
+                <button class="btn-green" onclick="goTo(4)" data-lt="Tęsti" data-en="Continue">Tęsti</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ======= SCREEN 4: Confirmation ======= -->
+    <div class="screen" id="screen4">
+        <div class="page center">
+
+            <div class="steps">
+                <div class="step done">1</div><div class="line done"></div>
+                <div class="step done">2</div><div class="line done"></div>
+                <div class="step done">3</div><div class="line done"></div>
+                <div class="step done active">4</div>
+            </div>
+
+            <div class="check-circle">✓</div>
+
+            <h2 data-lt="Registracija sėkminga!" data-en="Registration successful!">Registracija sėkminga!</h2>
+            <p data-lt="Darbuotojas informuotas apie Jūsų atvykimą" data-en="The employee has been notified of your arrival">
+                Darbuotojas informuotas apie Jūsų atvykimą
+            </p>
+
+            <button class="btn-green big" onclick="resetAll()" data-lt="Baigti" data-en="Finish">Baigti</button>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
