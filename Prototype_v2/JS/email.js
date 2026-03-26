@@ -14,11 +14,11 @@ emailjs.init(
 const teachers = [
     {
         name: "Teacher1",
-        email: "psixuxka123@gmail.com"
+        email: "projekto-teacher1@outlook.com"
     },
     {
         name: "Teacher2",
-        email: "killcook128@gmail.com"
+        email: "projekto-teacher2@outlook.com"
     },
 ]
 
