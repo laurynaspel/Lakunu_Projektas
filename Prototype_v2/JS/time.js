@@ -8,22 +8,22 @@ const dateDiv = document.querySelector("#date");
 
 //Menesiai
 const months = [
-  "sausis",
-  "vasaris",
-  "kovas",
-  "balandis",
-  "gegužė",
-  "birželis",
-  "liepa",
-  "rugpjūtis",
-  "rugsėjis",
-  "spalis",
-  "lapkritis",
-  "gruodis"
+    "sausis",
+    "vasaris",
+    "kovas",
+    "balandis",
+    "gegužė",
+    "birželis",
+    "liepa",
+    "rugpjūtis",
+    "rugsėjis",
+    "spalis",
+    "lapkritis",
+    "gruodis"
 ];
 
 //Funkcija gauti dabartini laika
-function timeNow(){
+function timeNow() {
     let timeHours = (new Date()).getHours()
     timeHours = timeHours < 10 ? "0" + timeHours : timeHours;
 
@@ -35,7 +35,7 @@ function timeNow(){
 }
 
 //Funkcija gauti dabartinia data
-function dateNow(){
+function dateNow() {
     let monthNumber = (new Date()).getMonth();
 
     let monthDay = (new Date()).getDate();
@@ -47,7 +47,7 @@ function dateNow(){
 }
 
 //Pakeisti teksta puslapije
-function changeTime(){
+function changeTime() {
     timeDiv.innerHTML = timeNow();
     dateDiv.innerHTML = dateNow();
 }

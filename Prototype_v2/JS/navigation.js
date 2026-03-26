@@ -17,10 +17,10 @@ const resetButton = document.querySelector("#lastButton");
 let pageNow = 0;
 
 //Puslapio pakeitimai
-function pageChange(){
-    pages.forEach((el, i) =>{
+function pageChange() {
+    pages.forEach((el, i) => {
         //Jeigu indeksas sutampa su dabartinio puslapio indekso jo display gauna reiksme "block", kitaip "none"
-        el.style.display = i===pageNow ? "flex" : "none";
+        el.style.display = i === pageNow ? "flex" : "none";
     });
     //Mygtukai toliau
     forwardButtons.forEach(el => el.addEventListener('click', pageForward));

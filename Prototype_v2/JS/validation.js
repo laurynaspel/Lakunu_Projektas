@@ -35,7 +35,7 @@ teachersSelect.addEventListener('change', () => {
 // formos siuntimas/validacija
 form.addEventListener('submit', e => {
     e.preventDefault();
-    
+
     if (userName.value.trim() === '') { // trim pasalina tarpus gale ir pradzioj
         alert('Įvesk vardą');
         return;
@@ -78,5 +78,5 @@ form.addEventListener('submit', e => {
 
     pageForward();
     sendEmail();
-    
+
 });

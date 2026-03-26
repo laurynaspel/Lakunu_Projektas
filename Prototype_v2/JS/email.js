@@ -27,12 +27,12 @@ const data = {
 };
 
 //Funckija laiško atsiusti
-function sendEmail(){
-    emailjs.send(serviceID, templateID, data).then(response => console.log("Email buvo sekmingai išsiustas", response.status, response.text), 
-    error => {
-        console.log("KLAIDA!!!!!", error);
-        alert("KLAIDA");
-    }
+function sendEmail() {
+    emailjs.send(serviceID, templateID, data).then(response => console.log("Email buvo sekmingai išsiustas", response.status, response.text),
+        error => {
+            console.log("KLAIDA!!!!!", error);
+            alert("KLAIDA");
+        }
     );
 }
 

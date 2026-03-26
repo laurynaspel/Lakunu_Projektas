@@ -19,7 +19,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -27,10 +29,10 @@
         <!-- Always Aside -->
         <aside>
             <div class="time-date">
-                <div class="date" id="date">Kovo 27</div>
-                <div class="time" id="time">23:59</div>
+                <div class="date" id="date">ERORR</div>
+                <div class="time" id="time">00:00</div>
             </div>
-            <div class="techin-logo"><img src="IMG/Techin_light.webp" alt="Techin Logo"></div>
+            <div class="techin-logo"><img src="IMG/Techin.webp" alt="Techin Logo"></div>
         </aside>
         <!-- Main content changes based on screen -->
         <main>
@@ -44,34 +46,35 @@
             <div class="registration" id="registrationPage">
                 <h1>Lankytojo registracija</h1>
                 <form id="form" action="#">
-                    <label for="userName">Vardas:</label>
+                    <label for="userName">Vardas</label>
                     <input type="text" name="userName" id="userName">
-                    
-                    <label for="userSurname">Pavardė:</label>
+
+                    <label for="userSurname">Pavardė</label>
                     <input type="text" name="userSurname" id="userSurname">
-                
-                    <label for="goal">Vizito tikslas:</label>
+
+                    <label for="goal">Vizito tikslas</label>
                     <select name="goal" id="goal">
-                        <option value="">Pasirink</option>
+                        <option value=""></option>
                         <option value="Dėl mokslų">Dėl mokslų</option>
                         <option value="Dėl dokumentų">Dėl dokumentų</option>
                         <option value="Konsultacijai">Konsultacijai</option>
                         <option value="Suderintas vizitas">Suderintas vizitas</option>
                         <option value="Kita">Kita</option>
                     </select>
-                
+
                     <div id="otherBox" style="display: none;">
-                        <label for="otherReason">Įrašyk priežastį:</label>
+                        <label for="otherReason">Įrašyk priežastį</label>
                         <textarea name="otherReason" id="otherReason"></textarea>
                     </div>
-                
-                    <p>Pas ką atėjai:</p>
+
+                    <p>Pas ką atėjai</p>
                     <select name="teacherName" id="teachers">
-                        <option value="">Pasirink</option>
+                        <option value=""></option>
                     </select>
-            
-                    <button>Testi</button>
-                    <button type="reset" id="backButton">Atgal</button>
+                    <div class="form-btn">
+                        <button class="form-testi">Testi</button>
+                        <button type="reset" id="backButton" class="form-atgal">Atgal</button>
+                    </div>
                 </form>
             </div>
             <!-- Directions -->
@@ -81,25 +84,19 @@
             </div>
             <!-- Confirmation -->
             <div class="done" id="succefulPage">
-                <img src="IMG/check_ligth.svg" alt="Confirmation">
+                <img src="IMG/check.svg" alt="Confirmation">
                 <h1>Registracija sėkminga!</h1>
                 <p>Darbuotojas informuotas apie Jūsų atvykimą</p>
-                <img src="IMG/mail_light.svg" alt="Mail Icon">
+                <img src="IMG/mail.svg" alt="Mail Icon">
                 <button type="button" id="lastButton">Baigti</button>
             </div>
         </main>
-        <div class="buttons">
             <div class="languages">
-                <button class="lang-btn active" onclick="setLang('lt')">LT</button>
-                <button class="lang-btn" onclick="setLang('en')">EN</button>
+                <img src="IMG/language.svg" alt="languages">
+                <button class="lang-btn LT active" onclick="setLang('lt')">LT</button>
+                <hr>
+                <button class="lang-btn UK" onclick="setLang('en')">EN</button>
             </div>
-            <div class="theme">
-                <button class="theme-btn active" onclick="setTheme('dark')"><img src="IMG/dark_mode.svg"
-                        alt="dark mode"></button>
-                <button class="theme-btn" onclick="setTheme('light')"><img src="IMG/light_mode.svg"
-                        alt="light mode"></button>
-            </div>
-        </div>
     </div>
 </body>
 
