@@ -198,7 +198,9 @@ textarea:focus {
     box-shadow: var(--accent-color) 0px 0px 8px;
 
 }
-
+input, option, select{
+    font-size: 1.2rem;
+}
 
 form input,
 form select,
@@ -223,10 +225,7 @@ form textarea {
     padding: 7px 25px;
 }
 
-select {
-    background-color: var(--secondary-color);
-}
-select > option *{
+select>option * {
     border: 5px solid green;
 }
 
