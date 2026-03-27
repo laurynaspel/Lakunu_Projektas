@@ -31,8 +31,8 @@ const dict = [
     EN: "The purpose of visit",
   },
   {
-    LT: "Pas ką atėjai",
-    EN: "Who did you come to visit?",
+    LT: "Vizitas pas",
+    EN: "Who did you come to visit",
   },
   {
     LT: "Testi",
