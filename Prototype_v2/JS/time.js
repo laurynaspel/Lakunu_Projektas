@@ -6,18 +6,18 @@ const dateDiv = document.querySelector("#date");
 
 //Menesiai
 const months = [
-  "sausis",
-  "vasaris",
-  "kovas",
-  "balandis",
-  "gegužė",
-  "birželis",
-  "liepa",
-  "rugpjūtis",
-  "rugsėjis",
-  "spalis",
-  "lapkritis",
-  "gruodis",
+  "Sausis",
+  "Vasaris",
+  "Kovas",
+  "Balandis",
+  "Gegužė",
+  "Birželis",
+  "Liepa",
+  "Rugpjūtis",
+  "Rugsėjis",
+  "Spalis",
+  "Lapkritis",
+  "Gruodis",
 ];
 
 //Funkcija gauti dabartini laika
@@ -38,9 +38,11 @@ function dateNow() {
 
   let monthDay = new Date().getDate();
   monthDay = monthDay < 10 ? "0" + monthDay : monthDay;
-
+  
   let monthValue = `${months[monthNumber]} ${monthDay}`;
 
+  console.log(monthValue);
+  
   return monthValue;
 }
 
@@ -51,4 +53,3 @@ function changeTime() {
 }
 
 changeTime();
-setInterval(changeTime, 500);
