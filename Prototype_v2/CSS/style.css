@@ -3,6 +3,7 @@
 :root {
     --primary-color: #114853;
     --secondary-color: #FAF8FB;
+    --accent-color: #2CD47D;
     --gradient: linear-gradient(to right, #114853 0%, #384e51 100%);
 }
 
@@ -177,7 +178,7 @@ aside img {
 
 .registration h1 {
     font-size: 2.5rem;
-    margin-top: 15%;
+    margin-top: 12%;
     margin-bottom: 2%;
     color: var(--primary-color);
 }
@@ -187,6 +188,17 @@ form>p {
     color: var(--primary-color);
     font-size: 20px;
 }
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--accent-color);
+    border: 0;
+    box-shadow: var(--accent-color) 0px 0px 8px;
+
+}
+
 
 form input,
 form select,
@@ -199,6 +211,7 @@ form textarea {
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     height: 40px;
+    transition: all 100ms;
 }
 
 .form-testi {
@@ -208,6 +221,13 @@ form textarea {
     margin-top: 20px;
     font-size: 2rem;
     padding: 7px 25px;
+}
+
+select {
+    background-color: var(--secondary-color);
+}
+select > option *{
+    border: 5px solid green;
 }
 
 .form-atgal {
