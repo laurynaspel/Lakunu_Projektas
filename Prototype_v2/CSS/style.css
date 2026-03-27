@@ -20,7 +20,7 @@
     margin: 0;
 }
 
-body>* {
+body {
     font-family: "Eina", sans-serif;
 }
 
@@ -101,19 +101,21 @@ aside img {
     padding: 5px 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .languages img {
     width: 40px;
     height: 40px;
 }
-.languages hr{
+
+.languages hr {
     width: 2px;
     height: 2rem;
     background: var(--gradient);
     border: none;
-    
+
 }
 
-.lang-btn{
+.lang-btn {
     background-color: transparent;
     color: var(--primary-color);
     font-size: 25px;
@@ -121,7 +123,7 @@ aside img {
     border-radius: 10px;
 }
 
-.active{
+.active {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-size: 25px;

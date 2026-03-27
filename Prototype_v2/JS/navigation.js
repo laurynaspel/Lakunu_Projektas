@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 //Visi svetaines puslapiai pagal ID
 const pages = [
-    document.querySelector("#welcomePage"),
-    document.querySelector("#registrationPage"),
-    document.querySelector("#directionPage"),
-    document.querySelector("#succefulPage")
+  document.querySelector("#welcomePage"),
+  document.querySelector("#registrationPage"),
+  document.querySelector("#directionPage"),
+  document.querySelector("#succefulPage"),
 ];
 
 //Mygtukai
@@ -18,32 +18,32 @@ let pageNow = 0;
 
 //Puslapio pakeitimai
 function pageChange() {
-    pages.forEach((el, i) => {
-        //Jeigu indeksas sutampa su dabartinio puslapio indekso jo display gauna reiksme "block", kitaip "none"
-        el.style.display = i === pageNow ? "flex" : "none";
-    });
-    //Mygtukai toliau
-    forwardButtons.forEach(el => el.addEventListener('click', pageForward));
-    //Mygtukai atgal
-    backButtons.forEach(el => el.addEventListener('click', pageBack));
+  pages.forEach((el, i) => {
+    //Jeigu indeksas sutampa su dabartinio puslapio indekso jo display gauna reiksme "block", kitaip "none"
+    el.style.display = i === pageNow ? "flex" : "none";
+  });
+  //Mygtukai toliau
+  forwardButtons.forEach((el) => el.addEventListener("click", pageForward));
+  //Mygtukai atgal
+  backButtons.forEach((el) => el.addEventListener("click", pageBack));
 }
 
 //Vienu puslapiu pirmyn
 const pageForward = () => {
-    pageNow++;
-    pageChange();
-}
+  pageNow++;
+  pageChange();
+};
 
 //Vienu puslapiu atgal
 const pageBack = () => {
-    pageNow--;
-    pageChange();
-}
+  pageNow--;
+  pageChange();
+};
 
 //Funkciju priskirimas mygtukams
 
-backButtons.forEach(el => el.addEventListener('click', pageBack));
-forwardButtons.forEach(el => el.addEventListener('click', pageForward));
-resetButton.addEventListener('click', () => window.location.reload());
+backButtons.forEach((el) => el.addEventListener("click", pageBack));
+forwardButtons.forEach((el) => el.addEventListener("click", pageForward));
+resetButton.addEventListener("click", () => window.location.reload());
 
 pageChange();
