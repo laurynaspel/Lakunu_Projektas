@@ -38,11 +38,11 @@ function dateNow() {
 
   let monthDay = new Date().getDate();
   monthDay = monthDay < 10 ? "0" + monthDay : monthDay;
-  
+
   let monthValue = `${months[monthNumber]} ${monthDay}`;
 
   console.log(monthValue);
-  
+
   return monthValue;
 }
 

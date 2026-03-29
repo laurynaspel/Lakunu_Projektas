@@ -178,8 +178,7 @@ aside img {
 
 .registration h1 {
     font-size: 2.5rem;
-    margin-top: 12%;
-    margin-bottom: 2%;
+    margin-top: 10%;
     color: var(--primary-color);
 }
 
@@ -198,7 +197,11 @@ textarea:focus {
     box-shadow: var(--accent-color) 0px 0px 8px;
 
 }
-input, option, select{
+
+input,
+option,
+select,
+textarea {
     font-size: 1.2rem;
 }
 
@@ -244,21 +247,86 @@ select>option * {
     flex-direction: column;
 }
 
-form textarea {
-    min-height: 80px;
-    resize: vertical;
-}
+
 
 /* direction page */
 .directions {
     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.directions h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.directions>img {
+    width: 100px;
+}
+
+.directions_content {
+    border: 6px dotted var(--primary-color);
+    width: 60%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.directions_content img {
+    height: 60%;
+}
+
+.directions-btn {
+    background: var(--gradient);
+    border: none;
+    color: var(--secondary-color);
+    margin-top: 50px;
+    font-size: 2rem;
+    padding: 10px 50px;
+    border-radius: 20px;
 }
 
 /* confrimation page */
 .done {
     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.done>img {
+    height: 200px;
+}
+
+.done h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.done p {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.done-btn {
+    background: var(--gradient);
+    border: none;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    padding: 10px 100px;
+    border-radius: 20px;
 }
 
 .done img {
-    width: 10%;
+    height: 120px;
 }

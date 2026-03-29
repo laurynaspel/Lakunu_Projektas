@@ -6,21 +6,21 @@ const dict = [
   {
     LT: "Sveiki atvykę",
     EN: "Welcome",
-    
+
   },
   {
     LT: "Pradėti registraciją",
     EN: "Start registration",
-    
+
   },
   {
-    LT:"Lankytojo registracija",
-    EN:"Visitor Registration"
+    LT: "Lankytojo registracija",
+    EN: "Visitor Registration"
   },
   {
     LT: "Vardas",
     EN: "Name",
-    
+
   },
   {
     LT: "Pavardė",
@@ -35,7 +35,7 @@ const dict = [
     EN: "Who did you come to visit",
   },
   {
-    LT: "Testi",
+    LT: "Tęsti",
     EN: "Continue",
   },
   {
@@ -43,92 +43,92 @@ const dict = [
     EN: "Back",
   },
   {
-    LT:"Dėl mokslų",
+    LT: "Dėl mokslų",
     EN: "For studies"
   },
   {
-    LT:"Dėl dokumentų",
-    EN:"For documents"
+    LT: "Dėl dokumentų",
+    EN: "For documents"
   },
   {
-    LT:"Konsultacijai",
-    EN:"For consultation"
+    LT: "Konsultacijai",
+    EN: "For consultation"
   },
   {
-    LT:"Suderintas vizitas",
-    EN:"Planned visit"
+    LT: "Suderintas vizitas",
+    EN: "Planned visit"
   },
   {
-    LT:"Kita",
-    EN:"Other"
+    LT: "Kita",
+    EN: "Other"
   },
   {
-    LT:"Įrašyk priežastį",
-    EN:"Enter the reason"
+    LT: "Įrašyk priežastį",
+    EN: "Enter the reason"
   },
   {
-    LT:"Kelio nurodymai",
-    EN:"Directions"
+    LT: "Kelio nurodymai",
+    EN: "Directions"
   },
   {
-    LT:"Baigti",
-    EN:"Finish"
+    LT: "Baigti",
+    EN: "Finish"
   },
   {
-    LT:"Registracija sėkminga!",
-    EN:"Registration sucessfull!"
+    LT: "Registracija sėkminga!",
+    EN: "Registration successful!"
   },
   {
-    LT:"Darbuotojas informuotas apie Jūsų atvykimą",
-    EN:"The worker is noticed about your visit"
+    LT: "Darbuotojas informuotas apie Jūsų atvykimą",
+    EN: "The worker is notified about your visit"
   },
   {
-    LT:"Sausis",
-    EN:"January"
+    LT: "Sausis",
+    EN: "January"
   },
   {
-    LT:"Vasaris",
-    EN:"February"
+    LT: "Vasaris",
+    EN: "February"
   },
   {
-    LT:"Kovas",
-    EN:"March"
+    LT: "Kovas",
+    EN: "March"
   },
   {
-    LT:"Balandis",
-    EN:"April"
+    LT: "Balandis",
+    EN: "April"
   },
   {
-    LT:"Gegužė",
-    EN:"May"
+    LT: "Gegužė",
+    EN: "May"
   },
   {
-    LT:"Birželis",
-    EN:"June"
+    LT: "Birželis",
+    EN: "June"
   },
   {
-    LT:"Liepa",
-    EN:"July"
+    LT: "Liepa",
+    EN: "July"
   },
   {
-    LT:"Rugpjūtis",
-    EN:"August"
+    LT: "Rugpjūtis",
+    EN: "August"
   },
   {
-    LT:"Rugsėjis",
-    EN:"September"
+    LT: "Rugsėjis",
+    EN: "September"
   },
   {
-    LT:"Spalis",
-    EN:"October"
+    LT: "Spalis",
+    EN: "October"
   },
   {
-    LT:"Lapkritis",
-    EN:"November"
+    LT: "Lapkritis",
+    EN: "November"
   },
   {
-    LT:"Gruodis",
-    EN:"December"
+    LT: "Gruodis",
+    EN: "December"
   }
 ];
 
@@ -147,15 +147,15 @@ function changeMonthsLang() {
   let activeButton = languageButtons.find(el => el.textContent !== languageNow);
   months.forEach((element, i) => {
     let monthObjNow = dict.find((el) => el[languageNow] === element);
-    
-    
+
+
     if (monthObjNow && !activeButton.classList.contains("active")) {
       months[i] = languageNow == "LT" ? monthObjNow.EN : monthObjNow.LT;
-    
+
     }
   })
   changeTime();
-  
+
 }
 
 function changeLanguage() {
@@ -170,12 +170,12 @@ function changeLanguage() {
 
 languageButtons.forEach((el) =>
   el.addEventListener("click", () => {
-      if(!(el.classList.contains("active"))){
-        changeLanguage();
-        changeMonthsLang();
-        languageNow = el.textContent;
-        changeButtonBackground();
-      }
-      
+    if (!(el.classList.contains("active"))) {
+      changeLanguage();
+      changeMonthsLang();
+      languageNow = el.textContent;
+      changeButtonBackground();
+    }
+
   }),
 );

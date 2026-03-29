@@ -23,12 +23,12 @@ const teachers = [
 //Surinkti duomenys nuo vartotojo
 const data = {};
 
-//Funckija laiško atsiusti
+//Funckija laiškui atsiusti
 function sendEmail() {
   emailjs.send(serviceID, templateID, data).then(
     (response) =>
       console.log(
-        "Email buvo sekmingai išsiustas",
+        "El. laiškas buvo sekmingai išsiustas",
         response.status,
         response.text,
       ),

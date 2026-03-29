@@ -30,7 +30,7 @@
         <!-- Always Aside -->
         <aside>
             <div class="time-date">
-                <div class="date" id="date">ERORR</div>
+                <div class="date" id="date">ERROR</div>
                 <div class="time" id="time">00:00</div>
             </div>
             <div class="techin-logo"><img src="IMG/Techin.webp" alt="Techin Logo"></div>
@@ -53,6 +53,9 @@
                     <label for="userSurname">Pavardė</label>
                     <input type="text" name="userSurname" id="userSurname">
 
+                    <label for="userEmail">Jūsų EL. paštas</label>
+                    <input type="email" name="userEmail" id="userEmail">
+
                     <label for="goal">Vizito tikslas</label>
                     <select name="goal" id="goal">
                         <option value=""></option>
@@ -73,15 +76,23 @@
                         <option value=""></option>
                     </select>
                     <div class="form-btn">
-                        <button class="form-testi">Testi</button>
+                        <button class="form-testi">Tęsti</button>
                         <button type="reset" id="backButton" class="form-atgal">Atgal</button>
                     </div>
                 </form>
             </div>
             <!-- Directions -->
             <div class="directions" id="directionPage">
-                <h1>Kelio nurodymai</h1>
-                <button type="button" id="forwardButton">Baigti</button>
+                <img src="IMG/check.svg" alt="check">
+                <h1>Jūsų kelionė prasideda čia</h1>
+                <div class="directions_content">
+                    <img src="IMG/up.svg" alt="up arrow">
+                    <div class="directions_text">
+                        <p>Eikite į antrą aukštą</p>
+                        <p>Jūsų laukia 205 kabinete</p>
+                    </div>
+                </div>
+                <button type="button" class="directions-btn" id="forwardButton">Baigti</button>
             </div>
             <!-- Confirmation -->
             <div class="done" id="succefulPage">
@@ -89,7 +100,7 @@
                 <h1>Registracija sėkminga!</h1>
                 <p>Darbuotojas informuotas apie Jūsų atvykimą</p>
                 <img src="IMG/mail.svg" alt="Mail Icon">
-                <button type="button" id="lastButton">Baigti</button>
+                <button type="button" id="lastButton" class="done-btn">Baigti</button>
             </div>
         </main>
         <div class="languages">
