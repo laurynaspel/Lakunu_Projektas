@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHIN - Lankytojo registracija</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- JS scripts -->
+    <script src="JS/navigation.js" defer></script>
+    <script src="JS/validation.js" defer></script>
+    <script src="JS/email.js"></script>
+    <script src="JS/time.js" defer></script>
+    <script src="JS/language.js" defer></script>
+    <script src="JS/alert.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Always Aside -->
+        <aside>
+            <div class="time-date">
+                <div class="date" id="date">ERORR</div>
+                <div class="time" id="time">00:00</div>
+            </div>
+            <div class="techin-logo"><img src="IMG/Techin.webp" alt="Techin Logo"></div>
+        </aside>
+        <!-- Main content changes based on screen -->
+        <main>
+            <!-- Welcome Screen -->
+            <div class="welcome" id="welcomePage">
+                <h1>Sveiki atvykę</h1>
+                <hr>
+                <button type="button" class="welcome-btn" id="forwardButton">Pradėti registraciją</button>
+            </div>
+            <!-- Registration Form -->
+            <div class="registration" id="registrationPage">
+                <h1>Lankytojo registracija</h1>
+                <form id="form" action="#">
+                    <label for="userName">Vardas</label>
+                    <input type="text" name="userName" id="userName">
+
+                    <label for="userSurname">Pavardė</label>
+                    <input type="text" name="userSurname" id="userSurname">
+
+                    <label for="goal">Vizito tikslas</label>
+                    <select name="goal" id="goal">
+                        <option value=""></option>
+                        <option value="Dėl mokslų">Dėl mokslų</option>
+                        <option value="Dėl dokumentų">Dėl dokumentų</option>
+                        <option value="Konsultacijai">Konsultacijai</option>
+                        <option value="Suderintas vizitas">Suderintas vizitas</option>
+                        <option value="Kita">Kita</option>
+                    </select>
+
+                    <div id="otherBox" style="display: none;">
+                        <label for="otherReason">Įrašyk priežastį</label>
+                        <textarea name="otherReason" id="otherReason"></textarea>
+                    </div>
+
+                    <p>Vizitas pas</p>
+                    <select name="teacherName" id="teachers">
+                        <option value=""></option>
+                    </select>
+
+                    <label for="userSurname">Jūsų elektroninis paštas</label>
+                    <input type="text" name="userEmail" id="userEmail">
+
+                    <div class="form-btn">
+                        <button class="form-testi">Tęsti</button>
+                        <button type="reset" id="backButton" class="form-atgal">Atgal</button>
+                    </div>
+                    <div class="error-box" id="errorBox"></div>
+                </form>
+            </div>
+            <!-- Directions -->
+            <div class="directions" id="directionPage">
+                <h1>Kelio nurodymai</h1>
+                <button type="button" id="forwardButton">Baigti</button>
+            </div>
+            <!-- Confirmation -->
+            <div class="done" id="succefulPage">
+                <img src="IMG/check.svg" alt="Confirmation">
+                <h1>Registracija sėkminga!</h1>
+                <p>Darbuotojas informuotas apie Jūsų atvykimą</p>
+                <img src="IMG/mail.svg" alt="Mail Icon">
+                <button type="button" id="lastButton">Baigti</button>
+            </div>
+        </main>
+        <div class="languages">
+            <img src="IMG/language.svg" alt="languages">
+            <button class="lang-btn LT active" id="langButton">LT</button>
+            <hr>
+            <button class="lang-btn UK" id="langButton">EN</button>
+        </div>
+    </div>
+</body>
+
+</html>
