@@ -1,6 +1,6 @@
 "use strict";
 
-//Visi svetaines puslapiai pagal ID
+//Visi svetainės puslapiai pagal ID
 const pages = [
   document.querySelector("#welcomePage"),
   document.querySelector("#registrationPage"),

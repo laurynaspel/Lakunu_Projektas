@@ -8,7 +8,7 @@ emailjs.init({
   publicKey: "mlsFH5LSh9e3YU7Om",
 });
 
-//Mokytoju sarašas
+//Mokytojų sarašas
 const teachers = [
   {
     name: "Teacher1",
@@ -23,7 +23,7 @@ const teachers = [
 //Surinkti duomenys nuo vartotojo
 const data = {};
 
-//Funckija laiškui atsiusti
+//Funkcija laiškui atsiųsti
 function sendEmail() {
   emailjs.send(serviceID, templateID, data).then(
     (response) =>

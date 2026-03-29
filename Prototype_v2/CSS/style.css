@@ -7,10 +7,10 @@
     --gradient: linear-gradient(to right, #114853 0%, #384e51 100%);
 }
 
-/* Eina srifto deklaravimas */
+/* Eina šrifto deklaravimas */
 @font-face {
     font-family: 'Eina';
-    src: url('/fonts/Eina01-Bold.tff') format('tff');
+    src: url('/fonts/Eina01-Bold.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
 }
@@ -27,8 +27,8 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 512px 768px;
-    grid-template-rows: 800px;
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: 100vh;
     background-color: var(--primary-color);
 }
 
@@ -291,7 +291,7 @@ select>option * {
     border-radius: 20px;
 }
 
-/* confrimation page */
+/* confirmation page */
 .done {
     flex-direction: column;
     align-items: center;

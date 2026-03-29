@@ -20,7 +20,7 @@ const months = [
   "Gruodis",
 ];
 
-//Funkcija gauti dabartini laika
+//Funkcija gauti dabartinį laiką
 function timeNow() {
   let timeHours = new Date().getHours();
   timeHours = timeHours < 10 ? "0" + timeHours : timeHours;
@@ -32,7 +32,7 @@ function timeNow() {
   return timeValue;
 }
 
-//Funkcija gauti dabartinia data
+//Funkcija gauti dabartinę datą
 function dateNow() {
   let monthNumber = new Date().getMonth();
 
